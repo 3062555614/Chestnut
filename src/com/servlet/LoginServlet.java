@@ -54,8 +54,10 @@ public class LoginServlet extends HttpServlet {
 				request.getSession().setAttribute("user", user);
 				request.getRequestDispatcher("success.jsp").forward(request, response);
 			}else{
+			
 				request.setAttribute("flag", "用户名或密码错误！！！");
-				request.getRequestDispatcher("login.jsp").forward(request, response);			
+				
+				request.getRequestDispatcher("login.jsp?error=yes").forward(request, response);			
 			}
 			
 		} catch (Exception e) {

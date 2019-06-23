@@ -222,8 +222,7 @@
 								<div id="sub">
 									<input type="submit" value="马上评估" style="background-color:orangered ;
 									border-color: transparent;border-style: none;width: 250px;height: 70px;color: white;" />
-								</div>
-								
+								</div>	
 						</div>
 					</div>
 						

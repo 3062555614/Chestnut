@@ -399,6 +399,11 @@
 		//	侦听浏览器窗口大小变化
 		window.onresize = showDialog;
 		
+		var errori ='<%=request.getParameter("error")%>';
+		  if(errori=='yes'){
+		   alert("登录失败!");
+		  }
+		
 		//Ajax验证用户名
 		
 		
