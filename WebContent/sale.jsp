@@ -8,47 +8,7 @@
 	   
 	</head>
 	<style type="text/css">
-		*{
-			margin: 0;
-			padding: 0;
-		}
-		body{
-			width: 100%px;
-			height: 800px;
-		}
-		.head{
-			width: 100%;
-			height: 50px;
-		}
-		.headcontent{
-			margin: auto;
-			width: 80%;
-			height: 50px;
-			
-			
-		}
-		#headleft{
-			width: 200px;
-			height: 50px;
-			float: left;
-		}
-		#headleft img:hover{
-			cursor: pointer;
-		}
-		#headright{
-			
-			height: 35px;
-			float: right;
-			line-height: 50px;
-		}
-		#headright p{
-			width: 40px;
-			height: 35px;
-		}
-		#headright p:hover{
-			color:firebrick;
-			cursor:pointer;
-		}
+
 		.main{
 			width: 100%;
 			height: 600px;
@@ -139,19 +99,7 @@
 		}
 	</style>
 	<body>
-		<div class="head">
-			<div class="headcontent">
-				<div id="headleft">
-					<a href="login.jsp"><img src="img/栗子.png" /></a>
-				</div>
-				<div id="headmiddle">
-					
-				</div>
-				<div id="headright">
-					<p>登陆</p>
-				</div>
-			</div>
-		</div>
+		<%@ include file="head.jsp" %>
 		<div class="main">
 			<div class="maincontent">
 				<div id="maintop">
