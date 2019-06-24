@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");
 	    String password = request.getParameter("password");
-	    
+	    String select =request.getParameter("sel");
 	    try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/orcl","scott","admin");
@@ -52,10 +52,19 @@ public class LoginServlet extends HttpServlet {
 				user.setUsername(name);
 				user.setPassword(pass);
 				request.getSession().setAttribute("user", user);
+				if(select.equals("0")){
 				request.getRequestDispatcher("success.jsp").forward(request, response);
+				}
+				if(select.equals("1")){
+					request.getRequestDispatcher("successAdmin.jsp").forward(request, response);
+				}
+				if(select.equals("2")){
+					request.getRequestDispatcher("successStaff.jsp").forward(request, response);
+				}
+				
 			}else{
 			
-				request.setAttribute("flag", "用户名或密码错误！！！");
+				request.setAttribute("flag", "用户名或密码错误");
 				
 				request.getRequestDispatcher("login.jsp?error=yes").forward(request, response);			
 			}

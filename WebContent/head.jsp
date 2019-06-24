@@ -110,6 +110,7 @@
 		width: 100%;height: 50px;background: #3b7ae3;border:none;font-size: 16px;color: #fff;
 		outline: none;text-decoration: none;
 		display: block;text-align: center;line-height: 50px;
+		margin-top:7px;
 	}
 	.ui-dialog-submit:hover{
 	    cursor:pointer;
@@ -120,6 +121,9 @@
 		width: 100%;height:100%;background: #000;
 		position: absolute;top: 0px;height: 0px;z-index: 8000;
 		opacity:0.4; filter: Alpha(opacity=40);
+	}
+	.buttonChoose input{
+		margin-left: 12px;
 	}
 
 		
@@ -138,7 +142,7 @@
 		<div class="head">
 			<div class="headcontent">
 				<div id="headleft">
-					<a href="login.html"><img src="img/栗子.png" /></a>
+					<a href="login.jsp"><img src="img/栗子.png" /></a>
 				</div>
 				<div id="headmiddle"></div>
 				<div id="headright">
@@ -164,11 +168,16 @@
 								<div class="ui-dialog-l40">
 									<a href="#">忘记密码</a>
 								</div>
-								<div>
+								<div class="buttonChoose">
+								<input type="radio" value="0" class="user" name="sel" checked="checked">用户
+								<input type="radio" value="1" class="admin" name="sel">管理员
+								<input type="radio" value="2" class="staff" name="sel">员工
+								</div>
+								<div >
 									<input type="submit" class="ui-dialog-submit" value="登陆" />
 								</div>
 								<div class="ui-dialog-l40">
-									<div id="register"><a href="#" class="current">注册</a></div>
+									<div id="register"><a href="register.jsp" class="current">注册</a></div>
 									
 								</div>
 							</div>
